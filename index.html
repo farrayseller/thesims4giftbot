@@ -3,18 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Открыть Steam</title>
+
+    <title>Установка игры — Farray</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(circle at top, #1b3b59 0%, transparent 45%),
+                linear-gradient(135deg, #0b1622, #171d25);
+
+            color: #ffffff;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 520px;
+
+            padding: 45px 40px;
+
+            text-align: center;
+
+            background: rgba(23, 31, 41, 0.94);
+
+            border: 1px solid rgba(102, 192, 244, 0.25);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.55),
+                0 0 40px rgba(27, 126, 190, 0.12);
+        }
+
+        .logo {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .thanks {
+            margin: 0 0 28px;
+
+            color: #c7d5e0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .thanks strong {
+            color: #66c0f4;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 28px;
+            padding: 8px 14px;
+
+            border-radius: 20px;
+
+            background: rgba(102, 192, 244, 0.1);
+            color: #66c0f4;
+
+            font-size: 13px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #66c0f4;
+
+            box-shadow: 0 0 10px #66c0f4;
+
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.35;
+            }
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 32px;
+
+            border-radius: 6px;
+
+            background: linear-gradient(
+                to bottom,
+                #75c9f5,
+                #1a9fff
+            );
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+            box-shadow:
+                0 4px 15px rgba(27, 159, 255, 0.25);
+
+            transition:
+                transform 0.15s ease,
+                box-shadow 0.15s ease,
+                filter 0.15s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+
+            filter: brightness(1.08);
+
+            box-shadow:
+                0 7px 25px rgba(27, 159, 255, 0.4);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .hint {
+            margin-top: 22px;
+
+            color: #7f8b95;
+
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 30px;
+
+            color: #52606b;
+
+            font-size: 12px;
+        }
+    </style>
 </head>
+
 <body>
-    <h2>Открываем Steam...</h2>
 
-    <p>
-        Если Steam не открылся автоматически:
-        <a href="steam://install/1222670">нажми сюда</a>.
-    </p>
+    <div class="card">
 
-    <script>
-        window.location.href = "steam://install/1222670";
-    </script>
+        <div class="logo">🎮</div>
+
+        <h1>Игра готова к установке</h1>
+
+        <p class="thanks">
+            Спасибо за покупку у продавца
+            <strong>Farray</strong>!
+        </p>
+
+        <div class="status">
+            <span class="dot"></span>
+            Готово к запуску Steam
+        </div>
+
+        <br>
+
+        <a
+            class="button"
+            href="steam://install/1222670"
+        >
+            🚀 Открыть Steam
+        </a>
+
+        <p class="hint">
+            Если Steam не открылся автоматически,<br>
+            нажмите кнопку выше ещё раз.
+        </p>
+
+        <div class="footer">
+            Farray • Спасибо за покупку ❤️
+        </div>
+
+    </div>
+
 </body>
 </html>
